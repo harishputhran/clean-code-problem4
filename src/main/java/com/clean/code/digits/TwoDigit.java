@@ -2,7 +2,15 @@ package com.clean.code.digits;
 
 import com.clean.code.text.TextGenerator;
 
+/**
+ * Implementation for a Two digit number. 
+ * 
+ * @author hputhr
+ *
+ */
 public class TwoDigit implements Digit {
+	
+	protected String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 	
 	private TextGenerator textGenerator;
 	
@@ -10,11 +18,9 @@ public class TwoDigit implements Digit {
 		this.textGenerator = new TextGenerator();
 	}
 	
-	protected String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
-
 	public String getTextValueOfNumber(String inputNumber) {		
 		
-		textGenerator.generateText(findTensPlace(inputNumber.substring(0,1)));
+		textGenerator.generateText(findDigitAtTensPlace(inputNumber.substring(0,1)));
 		
 		SingleDigit singleDigit = new SingleDigit(Boolean.TRUE);		
 		String textForNumberAtUnitsPlace = singleDigit.getTextValueOfNumber(inputNumber.substring(1));
@@ -22,7 +28,7 @@ public class TwoDigit implements Digit {
 		return textGenerator.generateText(textForNumberAtUnitsPlace).trim();
 	}
 	
-	private String findTensPlace(String inputNumberAtTensPosition) {
+	private String findDigitAtTensPlace(String inputNumberAtTensPosition) {
 		if(!inputNumberAtTensPosition.equals(NUMBER_0)){
 			return TENS_COMMONTEXT[Integer.valueOf(inputNumberAtTensPosition) - 1];
 		}

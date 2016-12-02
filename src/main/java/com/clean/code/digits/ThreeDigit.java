@@ -2,6 +2,13 @@ package com.clean.code.digits;
 
 import com.clean.code.text.TextGenerator;
 
+/**
+ * Implementation for a Three digit number. 
+ * 
+ * @author hputhr
+ *
+ */
+
 public class ThreeDigit implements Digit {
 
 	private final String HUNDRED_COMMON_TEXT = "Hundred";
@@ -16,12 +23,12 @@ public class ThreeDigit implements Digit {
 	}
 
 	public String getTextValueOfNumber(String inputNumber) {
-		textGenerator.generateText(findHundredthPlace(inputNumber.substring(0, 1)), HUNDRED_COMMON_TEXT);		
+		textGenerator.generateText(findDigitAtHundredthPlace(inputNumber.substring(0, 1)), HUNDRED_COMMON_TEXT);		
 		String textOfaNumberAtUnitsPlacer = twoDigit.getTextValueOfNumber(inputNumber.substring(1));
 		return textGenerator.generateText(textOfaNumberAtUnitsPlacer).trim();	
 	}
 	
-	private String findHundredthPlace(String inputNumberAtHundredthPosition) {
+	private String findDigitAtHundredthPlace(String inputNumberAtHundredthPosition) {
 		if(!inputNumberAtHundredthPosition.equals(NUMBER_0)){
 			return UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1];
 		}

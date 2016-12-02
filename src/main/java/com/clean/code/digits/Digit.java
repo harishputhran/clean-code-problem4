@@ -1,5 +1,11 @@
 package com.clean.code.digits;
 
+/**
+ * Digit Interface Definition.
+ * 
+ * @author hputhr
+ *
+ */
 public interface Digit {
 	
 	String EMPTY_STRING_LITERAL = "";

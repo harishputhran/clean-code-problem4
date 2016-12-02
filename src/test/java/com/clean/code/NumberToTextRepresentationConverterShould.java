@@ -56,5 +56,10 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		numberToTextConverter.textualRepresentation(10000);
 	}
-
+	
+	@Test
+	public void return_nine_thousand_nine_hundred_ninety_nine_text_when_input_number_is_9999(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("Nine Thousand Nine Hundred Ninety Nine", numberToTextConverter.textualRepresentation(9999));
+	}
 }

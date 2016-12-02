@@ -6,10 +6,25 @@ import com.clean.code.digits.SingleDigit;
 import com.clean.code.digits.ThreeDigit;
 import com.clean.code.digits.TwoDigit;
 
+/**
+ * Class consisting of operations for retrieving Textual Representation of an input number.
+ * 
+ * @author hputhr
+ *
+ */
 public class NumberToTextualRepresentationService {
 	
+	/**
+	 * To get the textual representation
+	 */
 	private Digit digit;
 	
+	
+	/**
+	 * Method To generate the textual representation
+	 * @param number
+	 * @return
+	 */
 	public String generateTextualRepresentation(int number){
 		
 		String numericString = String.valueOf(number);
@@ -21,6 +36,12 @@ public class NumberToTextualRepresentationService {
 		
 	}
 
+	/**
+	 * Used to create instances of Digit based the number of digits.
+	 * 
+	 * @param String
+	 * @return Digit
+	 */
 	private Digit dtermineDigitsOfNumber(String numericString) {
 		int numerOfDigits = numericString.length();
 		switch(numerOfDigits){		

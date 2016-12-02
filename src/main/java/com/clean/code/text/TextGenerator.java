@@ -1,6 +1,11 @@
 package com.clean.code.text;
 
-
+/**
+ * Text Generation Utility
+ * 
+ * @author hputhr
+ *
+ */
 public class TextGenerator {
 	
 	private StringBuilder stringBuilder;

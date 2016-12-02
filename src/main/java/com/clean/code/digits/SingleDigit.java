@@ -1,5 +1,12 @@
 package com.clean.code.digits;
 
+/**
+ * Implementation for a Single digit number. 
+ * 
+ * @author hputhr
+ *
+ */
+
 public class SingleDigit implements Digit {
 	
 	private Boolean zeroTextExclusionFlag;
@@ -9,10 +16,10 @@ public class SingleDigit implements Digit {
 	}
 	
 	public String getTextValueOfNumber(String inputNumber) {
-		return findUnitsPlace(inputNumber);
+		return findDigitAtUnitsPlace(inputNumber);
 	}
 
-	private String findUnitsPlace(String inputNumberAtUnitsPosition) {
+	private String findDigitAtUnitsPlace(String inputNumberAtUnitsPosition) {
 		if(inputNumberAtUnitsPosition.equals(NUMBER_0)){
 			if(!zeroTextExclusionFlag){
 				return ZERO_TEXT;
