@@ -1,12 +1,24 @@
+# Target Folder
+**/target/
+
+**/bin/*
+
+**/.settings/**
+
+# Project & Classpath files
+.project
+**/.classpath
+
+
+#Class Files
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Eclipse Preferences
+*.prefs
 
-# Package Files #
-*.jar
-*.war
-*.ear
+#Ignore the log files
+**/**.log
+/target/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/.classpath
+/bin/
