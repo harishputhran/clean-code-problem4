@@ -23,8 +23,8 @@ public class ThreeDigit implements Digit {
 	}
 
 	public String getTextValueOfNumber(String inputNumber) {
-		textGenerator.generateText(findDigitAtHundredthPlace(inputNumber.substring(0, 1)), HUNDRED_COMMON_TEXT);		
-		String textOfaNumberAtUnitsPlacer = twoDigit.getTextValueOfNumber(inputNumber.substring(1));
+		textGenerator.generateText(findDigitAtHundredthPlace(inputNumber.substring(0, 1)), HUNDRED_COMMON_TEXT);// Get the first Element/Attribute	
+		String textOfaNumberAtUnitsPlacer = twoDigit.getTextValueOfNumber(inputNumber.substring(1));// Get the Remaining AElement/ttributes
 		return textGenerator.generateText(textOfaNumberAtUnitsPlacer).trim();	
 	}
 	

@@ -24,8 +24,8 @@ public class FourDigit implements Digit {
 
 	@Override
 	public String getTextValueOfNumber(String inputNumber) {
-		textGenerator.generateText(findDigitAtThousandthPlace(inputNumber.substring(0, 1)), THOUSAND_COMMON_TEXT);
-		String textOfaNumberFromHundredthPlacer = threeDigit.getTextValueOfNumber(inputNumber.substring(1));
+		textGenerator.generateText(findDigitAtThousandthPlace(inputNumber.substring(0, 1)), THOUSAND_COMMON_TEXT); // Get the first Element/Attribute	
+		String textOfaNumberFromHundredthPlacer = threeDigit.getTextValueOfNumber(inputNumber.substring(1)); // Get the Remaining Element/Attribute	
 		return textGenerator.generateText(textOfaNumberFromHundredthPlacer).trim();	
 	}
 	
