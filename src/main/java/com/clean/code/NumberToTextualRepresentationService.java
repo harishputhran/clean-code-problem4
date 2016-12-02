@@ -1,6 +1,7 @@
 package com.clean.code;
 
 import com.clean.code.digits.Digit;
+import com.clean.code.digits.FourDigit;
 import com.clean.code.digits.SingleDigit;
 import com.clean.code.digits.ThreeDigit;
 import com.clean.code.digits.TwoDigit;
@@ -25,7 +26,8 @@ public class NumberToTextualRepresentationService {
 		switch(numerOfDigits){		
 			case 1 : return new SingleDigit(Boolean.FALSE);
 			case 2 : return new TwoDigit();
-			case 3 : return new ThreeDigit();		
+			case 3 : return new ThreeDigit();
+			case 4 : return new FourDigit();	
 		}
 		return null;
 	}
