@@ -4,7 +4,8 @@ public enum TextForNumberTillTenEnum {
 	
 	One(1), 
 	Zero(0),
-	Ten(10);
+	Ten(10),
+	Twenty(20);
 	
 	private int number;
 
