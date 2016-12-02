@@ -7,7 +7,13 @@ public class TextGenerator {
 		if(number == 0){
 			return "Zero";
 		}
-		return "One";
+		if(number == 1){
+			return "One";
+		}
+		if(number == 10){
+			return "Ten";
+		}
+		return "";
 		
 	}
 
