@@ -1,20 +1,15 @@
 package com.clean.code.text;
 
+import com.clean.code.enumeration.TextForNumberTillTenEnum;
+
 public class TextGenerator {
 	
 	public String generateText(int number){
-		
-		if(number == 0){
-			return "Zero";
+		for(TextForNumberTillTenEnum textEnum : TextForNumberTillTenEnum.values()){
+			if(number == textEnum.getNumber()){
+				return textEnum.name();
+			}
 		}
-		if(number == 1){
-			return "One";
-		}
-		if(number == 10){
-			return "Ten";
-		}
-		return "";
-		
+		return "";		
 	}
-
 }
