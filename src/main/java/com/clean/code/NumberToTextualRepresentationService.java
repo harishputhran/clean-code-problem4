@@ -5,11 +5,11 @@ import com.clean.code.digits.SingleDigit;
 import com.clean.code.digits.ThreeDigit;
 import com.clean.code.digits.TwoDigit;
 
-public class DecimalValueFinder {
+public class NumberToTextualRepresentationService {
 	
 	private Digit digit;
 	
-	public String retrieveDecimalValues(int number){
+	public String generateTextualRepresentation(int number){
 		
 		String numericString = String.valueOf(number);
 		digit = dtermineDigitsOfNumber(numericString);
