@@ -17,13 +17,13 @@ public class TwoDigit implements Digit {
 		textGenerator.generateText(findTensPlace(inputNumber.substring(0,1)));
 		
 		SingleDigit singleDigit = new SingleDigit(Boolean.TRUE);		
-		String textForNumberAtUnitsPlace = singleDigit.getTextValueOfNumber(inputNumber.substring(1,2));
+		String textForNumberAtUnitsPlace = singleDigit.getTextValueOfNumber(inputNumber.substring(1));
 		
 		return textGenerator.generateText(textForNumberAtUnitsPlace).trim();
 	}
 	
 	private String findTensPlace(String inputNumberAtTensPosition) {
-		if(!inputNumberAtTensPosition.equals(0)){
+		if(!inputNumberAtTensPosition.equals(NUMBER_0)){
 			return TENS_COMMONTEXT[Integer.valueOf(inputNumberAtTensPosition) - 1];
 		}
 		return EMPTY_STRING_LITERAL;		

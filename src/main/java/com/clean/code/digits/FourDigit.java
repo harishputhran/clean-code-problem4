@@ -23,7 +23,7 @@ public class FourDigit implements Digit {
 	}
 	
 	private String findThousandthPlace(String inputNumberAtThousandthPosition) {
-		if(!inputNumberAtThousandthPosition.equals(0)){
+		if(!inputNumberAtThousandthPosition.equals(NUMBER_0)){
 			return UNITS_TEXT[Integer.valueOf(inputNumberAtThousandthPosition) - 1];
 		}
 		return EMPTY_STRING_LITERAL;

@@ -6,14 +6,11 @@ public class ThreeDigit implements Digit {
 
 	private final String HUNDRED_COMMON_TEXT = "Hundred";
 	
-	private SingleDigit singleDigit;
-	
 	private TwoDigit twoDigit;
 	
 	private TextGenerator textGenerator;
 	
 	public ThreeDigit(){
-		this.singleDigit = new SingleDigit(Boolean.TRUE);
 		this.twoDigit = new TwoDigit();
 		this.textGenerator = new TextGenerator();
 	}
@@ -25,8 +22,8 @@ public class ThreeDigit implements Digit {
 	}
 	
 	private String findHundredthPlace(String inputNumberAtHundredthPosition) {
-		if(!inputNumberAtHundredthPosition.equals(0)){
-			return singleDigit.UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1];
+		if(!inputNumberAtHundredthPosition.equals(NUMBER_0)){
+			return UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1];
 		}
 		return EMPTY_STRING_LITERAL;
 	}

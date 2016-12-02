@@ -2,8 +2,6 @@ package com.clean.code.digits;
 
 public class SingleDigit implements Digit {
 	
-	protected String[] UNITS_TEXT = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
-	
 	private Boolean zeroTextExclusionFlag;
 	
 	public SingleDigit(Boolean zeroTextExclusionFlag){
