@@ -20,5 +20,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("One", numberToTextConverter.textualRepresentation(1));
 	}
+	
+	@Test
+	public void return_ten_text_when_input_number_is_10(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("Ten", numberToTextConverter.textualRepresentation(10));
+	}
 
 }
