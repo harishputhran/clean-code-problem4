@@ -2,7 +2,7 @@ package com.clean.code.digits;
 
 public class SingleDigit implements Digit {
 	
-	protected String[] UNITS_TEXT = {"One", "Two"};
+	protected String[] UNITS_TEXT = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 	
 	public String getTextValueOfNumber(String inputNumber, boolean excludeZeroFromText) {
 		return findUnitsPlace(inputNumber, Boolean.FALSE);
