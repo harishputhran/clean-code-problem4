@@ -13,11 +13,11 @@ public class ThreeDigit implements Digit {
 		this.twoDigit = new TwoDigit();
 	}
 
-	public String getTextValueOfNumber(String inputNumber, boolean excludeZeroFromText) {
+	public String getTextValueOfNumber(String inputNumber) {
 		StringBuilder builder = new StringBuilder();
 		builder.append(findHundredthPlace(inputNumber.substring(0, 1)));
 		builder.append(SPACE_STRING_LITERAL);		
-		builder.append(twoDigit.getTextValueOfNumber(inputNumber.substring(1, 2), Boolean.TRUE));
+		builder.append(twoDigit.getTextValueOfNumber(inputNumber.substring(1, 2)));
 		return builder.toString().trim();
 	}
 	

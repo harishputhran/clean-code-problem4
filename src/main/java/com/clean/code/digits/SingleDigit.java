@@ -4,7 +4,7 @@ public class SingleDigit implements Digit {
 	
 	protected String[] UNITS_TEXT = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 	
-	public String getTextValueOfNumber(String inputNumber, boolean excludeZeroFromText) {
+	public String getTextValueOfNumber(String inputNumber) {
 		return findUnitsPlace(inputNumber, Boolean.FALSE);
 	}
 

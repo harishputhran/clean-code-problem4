@@ -4,7 +4,7 @@ public class TwoDigit implements Digit {
 	
 	protected String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thrity", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
-	public String getTextValueOfNumber(String inputNumber, boolean excludeZeroFromText) {
+	public String getTextValueOfNumber(String inputNumber) {
 		
 		StringBuilder builder = new StringBuilder(3);
 		
@@ -12,9 +12,8 @@ public class TwoDigit implements Digit {
 		
 		builder.append(SPACE_STRING_LITERAL);
 		
-		SingleDigit singleDigit = new SingleDigit();
-		
-		builder.append( singleDigit.getTextValueOfNumber(inputNumber.substring(1,2), Boolean.TRUE));
+		SingleDigit singleDigit = new SingleDigit();		
+		builder.append(singleDigit.getTextValueOfNumber(inputNumber.substring(1,2)));
 		
 		return builder.toString().trim();
 	}
