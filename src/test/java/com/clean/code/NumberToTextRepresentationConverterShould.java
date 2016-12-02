@@ -50,5 +50,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("Three Thousand Six Hundred Eighty Nine", numberToTextConverter.textualRepresentation(3689));
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void throw_illegal_argument_exceptiont_when_input_number_is_greater_than_4_digits(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		numberToTextConverter.textualRepresentation(10000);
+	}
 
 }
