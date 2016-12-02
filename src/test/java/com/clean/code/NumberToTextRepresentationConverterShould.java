@@ -14,5 +14,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("Zero", numberToTextConverter.textualRepresentation(0));
 	}
+	
+	@Test
+	public void return_one_text_when_input_number_is_1(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("One", numberToTextConverter.textualRepresentation(1));
+	}
 
 }
