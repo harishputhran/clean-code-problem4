@@ -44,5 +44,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("One Hundred Thirty Five", numberToTextConverter.textualRepresentation(135));
 	}
+	
+	@Test
+	public void return_three_thousand_six_hundred_eighty_nine_text_when_input_number_is_3689(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("Three Thousand Six Hundred Eighty Nine", numberToTextConverter.textualRepresentation(3689));
+	}
 
 }
