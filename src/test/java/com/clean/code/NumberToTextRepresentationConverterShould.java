@@ -32,5 +32,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("Twenty", numberToTextConverter.textualRepresentation(20));
 	}
+	
+	@Test
+	public void return_twentyone_text_when_input_number_is_21(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("Twenty One", numberToTextConverter.textualRepresentation(21));
+	}
 
 }
