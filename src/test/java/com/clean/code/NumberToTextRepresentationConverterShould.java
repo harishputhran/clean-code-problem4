@@ -62,4 +62,10 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("Nine Thousand Nine Hundred Ninety Nine", numberToTextConverter.textualRepresentation(9999));
 	}
+	
+	@Test
+	public void return_eleven_text_when_input_number_is_11(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("Eleven", numberToTextConverter.textualRepresentation(11));
+	}
 }
