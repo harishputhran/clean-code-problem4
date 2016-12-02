@@ -23,7 +23,7 @@ public class NumberToTextualRepresentationService {
 	private Digit dtermineDigitsOfNumber(String numericString) {
 		int numerOfDigits = numericString.length();
 		switch(numerOfDigits){		
-			case 1 : return new SingleDigit();
+			case 1 : return new SingleDigit(Boolean.FALSE);
 			case 2 : return new TwoDigit();
 			case 3 : return new ThreeDigit();		
 		}

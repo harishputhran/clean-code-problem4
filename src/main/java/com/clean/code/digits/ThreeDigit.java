@@ -13,7 +13,7 @@ public class ThreeDigit implements Digit {
 	private TextGenerator textGenerator;
 	
 	public ThreeDigit(){
-		this.singleDigit = new SingleDigit();
+		this.singleDigit = new SingleDigit(Boolean.TRUE);
 		this.twoDigit = new TwoDigit();
 		this.textGenerator = new TextGenerator();
 	}

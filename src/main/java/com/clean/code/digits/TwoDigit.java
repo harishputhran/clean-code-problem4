@@ -16,7 +16,7 @@ public class TwoDigit implements Digit {
 		
 		textGenerator.generateText(findTensPlace(inputNumber.substring(0,1)));
 		
-		SingleDigit singleDigit = new SingleDigit();		
+		SingleDigit singleDigit = new SingleDigit(Boolean.TRUE);		
 		String textForNumberAtUnitsPlace = singleDigit.getTextValueOfNumber(inputNumber.substring(1,2));
 		
 		return textGenerator.generateText(textForNumberAtUnitsPlace).trim();
