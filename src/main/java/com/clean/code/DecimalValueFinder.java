@@ -8,8 +8,11 @@ public class DecimalValueFinder {
 	private static final String EMPTY_STRING_LITERAL = "";
 	private static final String ZERO_TEXT = "Zero";
 	private static final String NUMBER_0 = "0";
-	private String[] TENS_COMMONTEXT = {"Ten", "Twenty"};
-	private String[] UNITS_TEXT = {"One", "Two"};
+	
+	private String[] UNITS_TEXT = {"One", "Two", "Three", "Four", "Five"};	
+	private String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thirty"};
+	private String HUNDRED_COMMON_TEXT = " Hundred";
+
 	
 	public List<String> retrieveDecimalValues(int number){
 		
@@ -26,10 +29,23 @@ public class DecimalValueFinder {
 						decimalValuesInText.add(findTensPlace(numbericString.substring(0,1)));
 						decimalValuesInText.add(findUnitsPlace(numbericString.substring(1, 2), Boolean.TRUE));
 						break;
-					 }			
+					 }
+			case 3:  {
+						decimalValuesInText.add(findHundredthPlace(numbericString.substring(0, 1)));
+						decimalValuesInText.add(findTensPlace(numbericString.substring(1, 2)));
+						decimalValuesInText.add(findUnitsPlace(numbericString.substring(2, 3), Boolean.TRUE));
+						break;
+					 }
 			}
 			return decimalValuesInText;
 		}	
+
+	private String findHundredthPlace(String inputNumberAtHundredthPosition) {
+		if(!inputNumberAtHundredthPosition.equals(0)){
+			return UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1] + HUNDRED_COMMON_TEXT;
+		}
+		return EMPTY_STRING_LITERAL;
+	}
 
 	private String findTensPlace(String inputNumberAtTensPosition) {
 		if(!inputNumberAtTensPosition.equals(0)){
@@ -46,9 +62,7 @@ public class DecimalValueFinder {
 			}
 			return EMPTY_STRING_LITERAL;
 		}
-		return UNITS_TEXT[Integer.valueOf(inputNumberAtUnitsPosition) - 1];
-			
-		
+		return UNITS_TEXT[Integer.valueOf(inputNumberAtUnitsPosition) - 1];		
 	}
 
 }
