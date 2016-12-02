@@ -38,5 +38,11 @@ public class NumberToTextRepresentationConverterShould {
 		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
 		assertEquals("Twenty One", numberToTextConverter.textualRepresentation(21));
 	}
+	
+	@Test
+	public void return_hundred_thirty_five_text_when_input_number_is_135(){
+		NumberToTextRepresentationConverter numberToTextConverter = new NumberToTextRepresentationConverter();
+		assertEquals("One Hundred Thirty Five", numberToTextConverter.textualRepresentation(135));
+	}
 
 }
