@@ -19,13 +19,14 @@ public class ThreeDigit implements Digit {
 	}
 
 	public String getTextValueOfNumber(String inputNumber) {
-		textGenerator.generateText(findHundredthPlace(inputNumber.substring(0, 1)), SPACE_STRING_LITERAL);		
-		return textGenerator.generateText(twoDigit.getTextValueOfNumber(inputNumber.substring(1, 2)));
+		textGenerator.generateText(findHundredthPlace(inputNumber.substring(0, 1)), HUNDRED_COMMON_TEXT);		
+		String textOfaNumberAtUnitsPlacer = twoDigit.getTextValueOfNumber(inputNumber.substring(1));
+		return textGenerator.generateText(textOfaNumberAtUnitsPlacer).trim();	
 	}
 	
 	private String findHundredthPlace(String inputNumberAtHundredthPosition) {
 		if(!inputNumberAtHundredthPosition.equals(0)){
-			return singleDigit.UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1] + HUNDRED_COMMON_TEXT;
+			return singleDigit.UNITS_TEXT[Integer.valueOf(inputNumberAtHundredthPosition) - 1];
 		}
 		return EMPTY_STRING_LITERAL;
 	}

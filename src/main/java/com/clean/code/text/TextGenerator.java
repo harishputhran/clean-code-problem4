@@ -15,6 +15,6 @@ public class TextGenerator {
 			stringBuilder.append(text);
 			stringBuilder.append(" ");
 		}
-		return stringBuilder.toString().trim();		
+		return stringBuilder.toString();		
 	}
 }

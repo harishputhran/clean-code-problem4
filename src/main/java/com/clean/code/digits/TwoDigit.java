@@ -10,14 +10,16 @@ public class TwoDigit implements Digit {
 		this.textGenerator = new TextGenerator();
 	}
 	
-	protected String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thrity", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+	protected String[] TENS_COMMONTEXT = {"Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
 	public String getTextValueOfNumber(String inputNumber) {		
-		textGenerator.generateText(findTensPlace(inputNumber.substring(0,1)));		
-		textGenerator.generateText(SPACE_STRING_LITERAL);
+		
+		textGenerator.generateText(findTensPlace(inputNumber.substring(0,1)));
 		
 		SingleDigit singleDigit = new SingleDigit();		
-		return textGenerator.generateText(singleDigit.getTextValueOfNumber(inputNumber.substring(1,2)));
+		String textForNumberAtUnitsPlace = singleDigit.getTextValueOfNumber(inputNumber.substring(1,2));
+		
+		return textGenerator.generateText(textForNumberAtUnitsPlace).trim();
 	}
 	
 	private String findTensPlace(String inputNumberAtTensPosition) {

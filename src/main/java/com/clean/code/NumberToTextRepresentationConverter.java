@@ -1,16 +1,15 @@
 package com.clean.code;
 
-import com.clean.code.text.TextGenerator;
 
 public class NumberToTextRepresentationConverter {
 	
-	private TextGenerator textGenerator;
+	private NumberToTextualRepresentationService numberToTextualRepresentationService;
 	
 	public NumberToTextRepresentationConverter(){
-		this.textGenerator = new TextGenerator();
+		this.numberToTextualRepresentationService = new NumberToTextualRepresentationService();
 	}
 
 	public String textualRepresentation(int number) {
-		return textGenerator.generateText(number);
+		return numberToTextualRepresentationService.generateTextualRepresentation(number);
 	}
 }
